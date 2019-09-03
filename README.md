@@ -1,5 +1,5 @@
 # stilor
-Interface and markup for Stilor, metall-rolling company
+Interface and markup for Stilor, metall-rolling company.  
 Project has 7 pages:  
 + Main (index.html)  
 + About (about.html)  

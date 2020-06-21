@@ -58,7 +58,6 @@ jQuery(window).scroll(function(){
   //Фиксация указателя разделов
   var pointer = jQuery('.pointer-list');
   var pointerTop = jQuery('.services-content').offset().top;
-  var pointerBottom = pointer.offset().top + pointer.height();
   var pointerBlockBottom = jQuery('.section-pointer').offset().top + jQuery('.section-pointer').height();
   if (    (jQuery(window).scrollTop() < pointerTop)) {
     pointer.removeClass('fixed');
@@ -75,8 +74,6 @@ jQuery(window).scroll(function(){
     pointer.addClass('bottom_sticked');
   };
 
-// bottom_sticked
-
   //Указатель текущего раздела
   var srvList = jQuery(".services-content").find(".services-list").children('.item');
   var count = srvList.length;
@@ -90,44 +87,14 @@ jQuery(window).scroll(function(){
 
     curPointer = jQuery(pointerList[i]);
     nextPointer= jQuery(pointerList[i+1]);
-    if ( (curSrv.offset().top - 200 < scrnTop) &&
-         (scrnTop < curSrv.offset().top + curSrvHeight - 65)
-          ) {
+
+    if ( (curSrv.offset().top - 200 < scrnTop) && (scrnTop < curSrv.offset().top + curSrvHeight - 65) )
+    {
       curSrv.addClass('active');
       curPointer.addClass('active');
-    }
-    else {
+    } else {
       curSrv.removeClass('active');
       curPointer.removeClass('active');
     }
   };
 });
-
-/*jQuery('img.svg').each(function(){
-      var $img = jQuery(this);
-      var imgID = $img.attr('id');
-      var imgClass = $img.attr('class');
-      var imgURL = $img.attr('src');
-      jQuery.get(imgURL, function(data) {
-          // Get the SVG tag, ignore the rest
-          var $svg = jQuery(data).find('svg');
-
-          // Add replaced image's ID to the new SVG
-          if(typeof imgID !== 'undefined') {
-              $svg = $svg.attr('id', imgID);
-          }
-          // Add replaced image's classes to the new SVG
-          if(typeof imgClass !== 'undefined') {
-              $svg = $svg.attr('class', imgClass+' replaced-svg');
-          }
-
-          // Remove any invalid XML tags as per http://validator.w3.org
-          $svg = $svg.removeAttr('xmlns:a');
-
-          // Replace image with new SVG
-          $img.replaceWith($svg);
-   		console.log($img);
-
-      }, 'xml');
-
-  });*/

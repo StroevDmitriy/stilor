@@ -151,7 +151,7 @@ input {
   width: 100%;
   background-image: url(../img/ellipse_bottom.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100% 70px;
   background-position: center bottom;
 }
 
@@ -162,7 +162,7 @@ input {
   width: 100%;
   background-image: url(../img/ellipse_top.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100% 70px;
   background-position: center top;
 }
 
@@ -173,7 +173,7 @@ input {
   width: 100%;
   background-image: url(../img/ellipse_top-grey.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100% 70px;
   background-position: center top;
 }
 
